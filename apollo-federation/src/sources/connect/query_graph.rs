@@ -19,7 +19,7 @@ use crate::{
 
 use super::{
     models::Connector,
-    selection_parser::{NamedSelection, PathSelection, Property, SubSelection},
+    json_selection::{NamedSelection, PathSelection, Property, SubSelection},
     ConnectFederatedConcreteFieldQueryGraphEdge, ConnectFederatedConcreteQueryGraphNode,
     ConnectFederatedEnumQueryGraphNode, ConnectFederatedQueryGraphBuilder, Selection,
 };
@@ -624,7 +624,7 @@ mod tests {
             },
             sources::{
                 connect::{
-                    selection_parser::Property, ConnectFederatedConcreteFieldQueryGraphEdge,
+                    json_selection::Property, ConnectFederatedConcreteFieldQueryGraphEdge,
                 },
                 SourceFederatedAbstractFieldQueryGraphEdge,
                 SourceFederatedConcreteFieldQueryGraphEdge, SourceFederatedConcreteQueryGraphNode,

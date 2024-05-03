@@ -17,7 +17,7 @@ use crate::{
         FederationSchema,
     },
     sources::connect::{
-        selection_parser::Selection,
+        json_selection::Selection,
         spec::schema::{CONNECT_HTTP_ARGUMENT_NAME, CONNECT_SOURCE_ARGUMENT_NAME},
     },
 };

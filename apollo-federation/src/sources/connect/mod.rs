@@ -1,6 +1,6 @@
 mod models;
 mod query_graph;
-mod selection_parser;
+mod json_selection;
 pub(crate) mod spec;
 mod url_path_template;
 
@@ -17,7 +17,7 @@ use crate::source_aware::federated_query_graph::graph_path::{
 use crate::source_aware::federated_query_graph::path_tree::FederatedPathTreeChildKey;
 use crate::source_aware::federated_query_graph::{FederatedQueryGraph, SelfConditionIndex};
 use crate::source_aware::query_plan::{FetchDataPathElement, QueryPlanCost};
-use crate::sources::connect::selection_parser::{PathSelection, Property, SubSelection};
+use crate::sources::connect::json_selection::{PathSelection, Property, SubSelection};
 use crate::sources::{
     SourceFetchDependencyGraphApi, SourceFetchDependencyGraphNode, SourceFetchNode, SourceId,
     SourcePath, SourcePathApi,
@@ -27,9 +27,9 @@ use apollo_compiler::executable::{Name, Value};
 use apollo_compiler::NodeStr;
 use indexmap::{IndexMap, IndexSet};
 use petgraph::graph::EdgeIndex;
-pub use selection_parser::ApplyTo;
-pub use selection_parser::ApplyToError;
-pub use selection_parser::Selection;
+pub use json_selection::ApplyTo;
+pub use json_selection::ApplyToError;
+pub use json_selection::Selection;
 use std::sync::Arc;
 pub use url_path_template::URLPathTemplate;
 
